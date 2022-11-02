@@ -10,10 +10,10 @@ import java.time.LocalDateTime;
 public class Person {
 
     @Length(min = 7)
-    @Pattern(regexp = "[.]*a[.]*")
+    @Pattern(regexp = "[\\w]*a[\\w]*",message = "must contains \"a\"")
     String name ;
 
-    @NotNull
+    @NotNull(message = "must be not null")
     LocalDateTime dateOfCreated;
 
     @Min(value = 10,message = "value should be more than 10")

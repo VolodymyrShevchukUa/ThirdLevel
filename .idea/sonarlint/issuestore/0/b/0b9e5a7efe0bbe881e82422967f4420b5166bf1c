@@ -1,10 +1,0 @@
-
-o
-java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(¶Íôù
-_
-java:S1854"DRemove this useless assignment to local variable "somethingStringA".(ÄØ¶Þûÿÿÿÿ
-P
-java:S1481"5Remove this unused "somethingStringA" local variable.(ÄØ¶Þûÿÿÿÿ
-<
-java:S1481"&Remove this unused "a" local variable.(µâ«¸
->	java:S108")Either remove or fill this block of code.(µâ«¸

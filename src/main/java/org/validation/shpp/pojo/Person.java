@@ -14,7 +14,7 @@ public class Person {
     String name ;
 
     @NotNull(message = "must be not null")
-    LocalDateTime dateOfCreated;
+    String dateOfCreated;
 
     @Min(value = 10,message = "value should be more than 10")
     int count;
@@ -29,11 +29,11 @@ public class Person {
         return this;
     }
 
-    public LocalDateTime getDateOfCreated() {
+    public String getDateOfCreated() {
         return dateOfCreated;
     }
 
-    public Person setDateOfCreated(LocalDateTime dateOfCreated) {
+    public Person setDateOfCreated(String dateOfCreated) {
         this.dateOfCreated = dateOfCreated;
         return this;
     }

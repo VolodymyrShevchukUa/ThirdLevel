@@ -9,8 +9,7 @@
     </formats>
     <files>
         <file>
-            <source>${project.build.directory}/${project.artifactId}-${project.version}.jar</source> <!-- Звідки бере то що хочемо викинути з проджу -->
-
+            <source>${project.build.directory}/${project.artifactId}-${project.version}.jar</source>
         </file>
         <file>
             <source>config.properties</source> <!-- Звідки бере то що хочемо викинути з проджу -->

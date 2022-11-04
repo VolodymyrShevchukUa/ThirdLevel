@@ -2,13 +2,13 @@ package org.validation.shpp;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.validation.shpp.mq.ReceiveMessage;
+import org.validation.shpp.mq.SendMessage;
 import org.validation.shpp.pojo.Person;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.time.LocalDateTime;
-import java.util.stream.IntStream;
 
 /**
  * Hello world!
@@ -22,12 +22,14 @@ public class App
    static int i =0;
     public static void main( String[] args )
     {
+        new SendMessage().sendMessage();
+        new ReceiveMessage().receiveMessage();
 
-       IntStream.range(0,1001).mapToObj(value -> new Person().setName("Name" + value).setCount(value)
-               .setDateOfCreated(LocalDateTime.now().toString())).forEach(App::createJson);
 
-
-        System.out.println( "Hello World!" );
+//
+//       IntStream.range(0,1001).mapToObj(value -> new Person().setName("Name" + value).setCount(value)
+//               .setDateOfCreated(LocalDateTime.now().toString())).forEach(App::createJson);
+//        System.out.println( "Hello World!" );
     }
     static void createJson(Person person){
         ObjectMapper objectMapper = new ObjectMapper();

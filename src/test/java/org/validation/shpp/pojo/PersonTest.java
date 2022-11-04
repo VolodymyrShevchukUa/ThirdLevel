@@ -24,7 +24,7 @@ class PersonTest {
 
     @Test
     void testNonValidName() {
-        Person person = new Person().setName("Kloustrof").setCount(20).setDateOfCreated(LocalDateTime.now());
+        Person person = new Person().setName("Kloustrof").setCount(20).setDateOfCreated(LocalDateTime.now().toString());
 
         Set<ConstraintViolation<Person>> constraintViolations = validator.validate(person);
 
@@ -43,7 +43,7 @@ class PersonTest {
     }
     @Test
     void testNonValidCount() {
-        Person person = new Person().setName("America").setCount(5).setDateOfCreated(LocalDateTime.now());
+        Person person = new Person().setName("America").setCount(5).setDateOfCreated(LocalDateTime.now().toString());
 
         Set<ConstraintViolation<Person>> constraintViolations = validator.validate(person);
 
@@ -52,7 +52,7 @@ class PersonTest {
     }
     @Test
     void testValidPerson() {
-        Person person = new Person().setName("America").setCount(20).setDateOfCreated(LocalDateTime.now());
+        Person person = new Person().setName("America").setCount(20).setDateOfCreated(LocalDateTime.now().toString());
 
         Set<ConstraintViolation<Person>> constraintViolations = validator.validate(person);
 

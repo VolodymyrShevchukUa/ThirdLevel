@@ -11,7 +11,7 @@ public class JMSProducer {
     // Пароль подключения по умолчанию
     private static final String PASSWORD = ActiveMQConnection.DEFAULT_PASSWORD;
     // адрес соединения по умолчанию
-    private static final String BROKEURL = "tcp://3.121.239.250:61616";
+    private static final String BROKEURL = "tcp://3.121.239.250:8181/admin";
    //         "failover://tcp://3.121.239.250:8161";
     // Количество отправленных сообщений
     private static final int SENDNUM = 10;

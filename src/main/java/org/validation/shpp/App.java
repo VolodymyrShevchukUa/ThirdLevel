@@ -25,7 +25,7 @@ public class App
         new SendMessage().sendMessage();
         new ReceiveMessage().receiveMessage();
 
-
+//
 //
 //       IntStream.range(0,1001).mapToObj(value -> new Person().setName("Name" + value).setCount(value)
 //               .setDateOfCreated(LocalDateTime.now().toString())).forEach(App::createJson);

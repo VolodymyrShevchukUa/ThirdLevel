@@ -127,7 +127,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>library</classpathPrefix>
-              <mainClass>secondweek.Assigment2</mainClass>
+              <mainClass>org.validation.shpp.App</mainClass>
             </manifest>
           </archive>
         </configuration>

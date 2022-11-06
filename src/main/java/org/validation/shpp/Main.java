@@ -48,11 +48,13 @@ public class Main implements Configurable {
         Random random = new Random();
         int timer = LocalDateTime.now().getSecond() + time;
         MessageSender messageSender = new MessageSender();
-        List<String> message = IntStream.range(0, 1000).takeWhile(s -> timer > LocalDateTime.now().getSecond()).
-                mapToObj(value -> new Person().setName(names.get(random.nextInt(names.size() - 1))).setCount(value)
+        List<String> message = IntStream.range(0, 2000).takeWhile(s -> timer > LocalDateTime.now().getSecond()).
+                mapToObj(value -> new Person()
+                        .setName(names.get(random.nextInt(names.size() - 1)))
+                        .setCount(random.nextInt(1000))
                         .setDateOfCreated(LocalDateTime.now().toString())).map(this::jsonMapper).collect(Collectors.toList());
         message.add(POISON_PILL);
-        messageSender.sendMessage(message);
+        messageSender.sendMessage(message);;
     }
 
     private void validationObject() {

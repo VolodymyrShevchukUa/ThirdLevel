@@ -25,6 +25,7 @@ public class MessageSender {
 
     public void sendMessage(List<String> message) {
         openConnection();
+
         try {
             Destination queue = session.createQueue(config.getQUEUE());
             MessageProducer producer = session.createProducer(queue);
@@ -32,6 +33,7 @@ public class MessageSender {
                 TextMessage textMessage = session.createTextMessage(text);
                 producer.send(textMessage);
             }
+            producer.close();
         } catch (JMSException e) {
             throw new RuntimeException(e);
         } finally {

@@ -54,7 +54,7 @@ public class Main implements Configurable {
                         .setCount(random.nextInt(1000))
                         .setDateOfCreated(LocalDateTime.now().toString())).map(this::jsonMapper).collect(Collectors.toList());
         message.add(POISON_PILL);
-        messageSender.sendMessage(message);;
+        messageSender.sendMessage(message);
     }
 
     private void validationObject() {

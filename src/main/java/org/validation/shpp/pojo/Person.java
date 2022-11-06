@@ -1,5 +1,6 @@
 package org.validation.shpp.pojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -18,6 +19,8 @@ public class Person {
 
     @Min(value = 10,message = "value should be more than 10")
     int count;
+
+    public String errors;
 
 
     public String getName() {

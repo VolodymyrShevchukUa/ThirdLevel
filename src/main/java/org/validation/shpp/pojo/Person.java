@@ -1,15 +1,12 @@
 package org.validation.shpp.pojo;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
-import java.time.LocalDateTime;
-
 public class Person {
-
+    static String se = "";
     @Length(min = 7)
     @Pattern(regexp = "[\\w]*a[\\w]*",message = "must contains \"a\"")
     String name ;

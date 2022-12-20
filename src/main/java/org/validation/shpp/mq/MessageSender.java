@@ -23,7 +23,7 @@ public class MessageSender {
     }
 
 
-    public void sendMessage(List<String> message) {
+    public void sendMessages(List<String> message) {
         openConnection();
 
         try {
